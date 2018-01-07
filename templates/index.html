@@ -1,0 +1,39 @@
+<html>
+    <style type = "text/css" media = "all">
+        body {
+            background: url(static/images/c.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;    
+        }
+        p {
+            color:000000;
+            text-align:center;
+            font-family:"American Typewriter", "Courier New", Courier, Monaco, mono;
+            font-size:25px;
+        }
+        #fields {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 50%;
+            width: 50%;
+            margin: -15% 0 0 -25%;        
+        }
+    </style>
+	<body>
+    {% block form%}
+		<form action = "http://192.169.43.195:5000/flamesEngine" method = "POST">
+			<div id="fields">
+                <p>Enter Boy's Name:<input type="text" name="bn"/></p>
+    			<p>Enter Girl's Name:<input type="text" name="gn"/></p>
+    			<p><input type = "submit" value = "submit" /></p>
+                <p style="color:000000; 
+                          font-weight:bolder;
+                          font-size:60px;">{{ result }}</p>
+            </div>
+   		</form>
+    {% endblock form%}
+	</body>
+</html>
