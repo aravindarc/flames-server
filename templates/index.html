@@ -24,15 +24,17 @@
     </style>
 	<body>
     {% block form%}
-		<form action = "http://192.169.43.195:5000/flamesEngine" method = "POST">
+		<form action = "http://192.168.42.156:5000/flamesEngine" method = "POST">
 			<div id="fields">
                 <p>Enter Boy's Name:<input type="text" name="bn"/></p>
     			<p>Enter Girl's Name:<input type="text" name="gn"/></p>
-    			<p><input type = "submit" value = "submit" /></p>
+    			<p><input type = "submit" name = "submit" value = "submit" /></p>
                 <p style="color:000000; 
                           font-weight:bolder;
                           font-size:60px;">{{ result }}</p>
             </div>
+            <p><input type="submit" name="0-25" value="0-25">
+                <input type="submit" name="0-50" value="0-50"></p>
    		</form>
     {% endblock form%}
 	</body>
